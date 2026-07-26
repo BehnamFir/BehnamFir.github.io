@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The personal academic website of Behnam Firouzi: structural dynamics, vibration, wave propagation, nonlinear mechanics, MEMS, optimization, energy harvesting, and scientific machine learning.">
+  <meta name="author" content="Behnam Firouzi">
+  <meta name="theme-color" content="#0a1f44">
+  <meta property="og:title" content="Behnam Firouzi | Personal Research Portfolio">
+  <meta property="og:description" content="Research across structural dynamics, wave mechanics, curved structures, MEMS, optimization, energy harvesting, and scientific AI.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://behnamfirouzi.github.io/">
+  <meta property="og:image" content="https://behnamfirouzi.github.io/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem("bf-theme"); } catch (_) { /* storage may be unavailable */ }
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+    })();
+  </script>
+  <script defer src="publications.js"></script>
+  <script defer src="script.js"></script>
+  <title>Behnam Firouzi | Personal Research Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="Behnam Firouzi — home">
+        <span class="brand-mark" aria-hidden="true">BF</span>
+        <span class="brand-copy">
+          <strong>Behnam Firouzi</strong>
+          <small>Research portfolio</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+        <a href="#profile">Profile</a>
+        <a href="#research">Research</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow"><span></span> Personal academic website</p>
+          <h1>Research across <em>vibration</em>, wave mechanics, nonlinear structures, and computational intelligence.</h1>
+          <p class="hero-lead">
+            I am <strong>Behnam Firouzi</strong>, a Marie Skłodowska-Curie PhD Fellow in Mechanical Engineering at Aalborg University. This portfolio brings together my complete research trajectory—from nonlinear MEMS and energy harvesting to structural diagnostics, curved structures, periodic waveguides, and physics-informed computation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#publications">Browse all publications <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://scholar.google.com/citations?user=DR-4DkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="profile-links" aria-label="Academic profiles">
+            <a href="https://orcid.org/0000-0002-6947-6600" target="_blank" rel="noopener noreferrer">ORCID</a>
+            <a href="https://vbn.aau.dk/en/persons/behnamf/" target="_blank" rel="noopener noreferrer">AAU Research Portal</a>
+            <a href="https://www.researchgate.net/profile/Behnam-Firouzi-2" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="Visual map of Behnam Firouzi's research areas">
+          <div class="identity-card">
+            <div class="identity-monogram" aria-hidden="true">BF</div>
+            <div>
+              <p>Behnam Firouzi</p>
+              <span>PhD Fellow · Solid & Computational Mechanics</span>
+            </div>
+            <span class="availability-dot" title="Academic profile"></span>
+          </div>
+
+          <svg class="research-map" viewBox="0 0 720 500" role="img" aria-labelledby="research-map-title research-map-description">
+            <title id="research-map-title">Research field map</title>
+            <desc id="research-map-description">An abstract map connecting structural dynamics, wave propagation, MEMS, optimization, and scientific machine learning.</desc>
+            <defs>
+              <linearGradient id="beamLine" x1="0" x2="1">
+                <stop offset="0" stop-color="#75b7ff"/>
+                <stop offset="0.52" stop-color="#38e0c1"/>
+                <stop offset="1" stop-color="#9b8cff"/>
+              </linearGradient>
+              <radialGradient id="nodeGlow">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+                <stop offset="0.28" stop-color="#78ddce" stop-opacity="0.62"/>
+                <stop offset="1" stop-color="#78ddce" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="12" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <g class="map-grid" aria-hidden="true">
+              <path d="M70 95H650M70 180H650M70 265H650M70 350H650M70 435H650"/>
+              <path d="M120 55V465M240 55V465M360 55V465M480 55V465M600 55V465"/>
+            </g>
+
+            <path class="map-orbit orbit-one" d="M110 310 C165 100, 330 70, 470 155 S635 345, 555 410 C470 478, 280 445, 190 355 Z"/>
+            <path class="map-orbit orbit-two" d="M145 155 C260 80, 505 105, 594 250 C650 342, 522 430, 344 408 C170 387, 70 255, 145 155 Z"/>
+            <path class="map-wave" d="M88 305 C150 185, 220 185, 282 305 S414 425, 485 300 S605 170, 650 265"/>
+            <path class="map-wave map-wave-shadow" d="M88 305 C150 185, 220 185, 282 305 S414 425, 485 300 S605 170, 650 265"/>
+
+            <g class="map-node node-main" transform="translate(360 252)">
+              <circle r="78" fill="url(#nodeGlow)"/>
+              <circle class="node-core" r="47"/>
+              <text text-anchor="middle" y="-3">Research</text>
+              <text text-anchor="middle" y="17">portfolio</text>
+            </g>
+
+            <g class="map-node" transform="translate(176 160)">
+              <circle class="node-core" r="40"/>
+              <text text-anchor="middle" y="-3">Curved</text><text text-anchor="middle" y="15">structures</text>
+            </g>
+            <g class="map-node" transform="translate(540 144)">
+              <circle class="node-core" r="40"/>
+              <text text-anchor="middle" y="-3">Wave</text><text text-anchor="middle" y="15">mechanics</text>
+            </g>
+            <g class="map-node" transform="translate(590 354)">
+              <circle class="node-core" r="40"/>
+              <text text-anchor="middle" y="-3">Scientific</text><text text-anchor="middle" y="15">AI</text>
+            </g>
+            <g class="map-node" transform="translate(176 377)">
+              <circle class="node-core" r="40"/>
+              <text text-anchor="middle" y="-3">MEMS &</text><text text-anchor="middle" y="15">harvesting</text>
+            </g>
+
+            <g class="map-resonators" aria-hidden="true">
+              <line x1="278" y1="304" x2="278" y2="246"/><rect x="260" y="220" width="36" height="28" rx="7"/>
+              <line x1="486" y1="300" x2="486" y2="242"/><rect x="468" y="216" width="36" height="28" rx="7"/>
+            </g>
+          </svg>
+
+          <div class="equation-strip" aria-hidden="true">
+            <span>det[T(ω) − λI] = 0</span>
+            <span>mẍ + cẋ + kx + αx² + βx³ = F(t)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container stats-grid reveal" aria-label="Research output summary">
+        <article class="stat-card">
+          <strong id="journal-count">16</strong>
+          <span>Journal articles</span>
+        </article>
+        <article class="stat-card">
+          <strong id="conference-count">2</strong>
+          <span>Conference contributions</span>
+        </article>
+        <article class="stat-card">
+          <strong>6</strong>
+          <span>Connected research themes</span>
+        </article>
+        <article class="stat-card stat-card-link">
+          <span>Live scholarly record</span>
+          <a href="https://scholar.google.com/citations?user=DR-4DkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">View Google Scholar <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="profile" class="section section-muted">
+      <div class="container profile-layout">
+        <div class="section-intro reveal">
+          <p class="section-kicker">Profile</p>
+          <h2>One research identity, developed across several engineering domains.</h2>
+        </div>
+        <div class="profile-copy reveal">
+          <p class="large-copy">
+            My research is unified by a central question: <strong>how can mathematical modelling, computation, and data-driven methods reveal—and improve—the dynamic behaviour of complex mechanical systems?</strong>
+          </p>
+          <div class="prose-columns">
+            <p>
+              My current work focuses on vibration and structural-wave propagation in curved and thin-walled structures. I study how curvature, periodicity, local resonance, imperfections, prestress, and boundary conditions alter modal behaviour, attenuation, energy transport, and model validity.
+            </p>
+            <p>
+              Earlier work established a broader foundation in nonlinear MEMS, electrostatic instability, piezoelectric energy harvesting, structural damage detection, rotating machinery, mechanical design optimization, robotics, and deep-learning forecasting. This website presents these areas as a connected research portfolio rather than a page devoted to a single project.
+            </p>
+          </div>
+          <div class="profile-note">
+            <span class="note-icon" aria-hidden="true">i</span>
+            <p>Publications use the name <strong>Behnam Firouzi</strong>. Aalborg University’s administrative research directory currently displays <strong>Behnam Firoozi</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Research</p>
+            <h2>Six connected research themes</h2>
+          </div>
+          <p>From first-principles mechanics to inverse identification and scientific machine learning.</p>
+        </div>
+
+        <div class="theme-grid">
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="curve-icon"></span></div>
+            <p class="theme-index">01</p>
+            <h3>Curved structures & nonlinear dynamics</h3>
+            <p>Exact and approximate models for curved beams, panels, shells, modal veering, internal resonance, backbone curves, and nonlinear frequency response.</p>
+            <ul class="tag-list"><li>Curved beams</li><li>Reduced-order models</li><li>Model validity</li></ul>
+          </article>
+
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="wave-icon"></span></div>
+            <p class="theme-index">02</p>
+            <h3>Periodic structures & wave propagation</h3>
+            <p>Bloch–Floquet analysis, complex propagation constants, stopband mechanisms, local resonance, insertion loss, and energy transport.</p>
+            <ul class="tag-list"><li>Dispersion</li><li>WFEM</li><li>Metastructures</li></ul>
+          </article>
+
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="micro-icon"></span></div>
+            <p class="theme-index">03</p>
+            <h3>MEMS/NEMS & electrostatic actuation</h3>
+            <p>Static deformation, pull-in instability, primary and subharmonic resonances, fringing fields, intermolecular forces, and microsensor dynamics.</p>
+            <ul class="tag-list"><li>Microbeams</li><li>Stability</li><li>Perturbation</li></ul>
+          </article>
+
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="harvest-icon"></span></div>
+            <p class="theme-index">04</p>
+            <h3>Energy harvesting & smart structures</h3>
+            <p>Piezoelectric harvesters under electrostatic excitation, coupled electromechanical modelling, geometric design, and performance optimization.</p>
+            <ul class="tag-list"><li>Piezoelectricity</li><li>Electromechanics</li><li>Smart structures</li></ul>
+          </article>
+
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="diagnostic-icon"></span></div>
+            <p class="theme-index">05</p>
+            <h3>Diagnostics & engineering optimization</h3>
+            <p>Inverse crack and unbalance identification, fatigue-life design, hybrid metaheuristics, statistical comparison, and computational efficiency.</p>
+            <ul class="tag-list"><li>Damage detection</li><li>Rotordynamics</li><li>Metaheuristics</li></ul>
+          </article>
+
+          <article class="theme-card reveal">
+            <div class="theme-icon" aria-hidden="true"><span class="ai-icon"></span></div>
+            <p class="theme-index">06</p>
+            <h3>Scientific AI & computational mechanics</h3>
+            <p>Physics-informed neural networks, neural inverse models, FEM/WFEM integration, uncertainty analysis, forecasting, and interpretable surrogates.</p>
+            <ul class="tag-list"><li>PINNs</li><li>FEM</li><li>Inverse problems</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-dark">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <div>
+            <p class="section-kicker">Research portfolio</p>
+            <h2>Current directions and foundational projects</h2>
+          </div>
+          <p>High-level summaries of published, active, and emerging research programmes.</p>
+        </div>
+
+        <div class="portfolio-list">
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status published">Published</span><span>Wave mechanics</span></div>
+            <div class="portfolio-body">
+              <h3>Stopband mechanisms in periodically corrugated structures</h3>
+              <p>Classification of divergence-type and flutter-type stopbands using analytical dispersion equations, Floquet theory, modal boundary classes, WFEM replication, finite-chain response, and independent validation.</p>
+            </div>
+            <div class="portfolio-methods"><span>Floquet</span><span>WFEM</span><span>Insertion loss</span></div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status published">Published</span><span>Nonlinear dynamics</span></div>
+            <div class="portfolio-body">
+              <h3>Exact curved-beam models versus shape-imperfection models</h3>
+              <p>Assessment of when static-condensation-based approximations reproduce—and when they fail to reproduce—the linear and nonlinear dynamics of beams with constant curvature.</p>
+            </div>
+            <div class="portfolio-methods"><span>Exact mechanics</span><span>ROM</span><span>Modal coupling</span></div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status active">Active</span><span>Periodic resonators</span></div>
+            <div class="portfolio-body">
+              <h3>Locally resonant curved waveguides and experimental transmission</h3>
+              <p>Mechanism-resolved studies of resonator-assisted stopbands, mode conversion, finite-chain attenuation, insertion loss, structural intensity, and laser-vibrometry-based validation.</p>
+            </div>
+            <div class="portfolio-methods"><span>Resonators</span><span>LDV</span><span>Energy flux</span></div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status active">Active</span><span>MSCA APRIORI</span></div>
+            <div class="portfolio-body">
+              <h3>Manufacturing effects in thin-walled curved components</h3>
+              <p>Linking geometric imperfections, residual stresses, plastic strains, boundary conditions, and manufacturing variability to the dynamic properties of thin-walled components.</p>
+            </div>
+            <div class="portfolio-methods"><span>Thin-walled parts</span><span>Uncertainty</span><span>Robust design</span></div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status emerging">Emerging</span><span>Scientific ML</span></div>
+            <div class="portfolio-body">
+              <h3>Physics-informed FEM and inverse wave mechanics</h3>
+              <p>Structure-preserving PINN and neural-operator concepts for parameter identification, defect localization, complex Bloch waves, and efficiency benchmarking against FEniCS-based finite elements.</p>
+            </div>
+            <div class="portfolio-methods"><span>PINN</span><span>FEniCS</span><span>Inverse design</span></div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <div class="portfolio-meta"><span class="status foundation">Foundation</span><span>2016–2024</span></div>
+            <div class="portfolio-body">
+              <h3>MEMS, energy harvesters, diagnostics, and optimization</h3>
+              <p>A research foundation spanning nonlinear electrostatic microstructures, piezoelectric harvesting, crack and unbalance identification, bearing and thermal-system optimization, robotics, and energy forecasting.</p>
+            </div>
+            <div class="portfolio-methods"><span>MEMS</span><span>Optimization</span><span>AI</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section publications-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Publications</p>
+            <h2>Research output archive</h2>
+          </div>
+          <p>Search by title, author, venue, year, or research theme. The list is ordered from newest to oldest.</p>
+        </div>
+
+        <div class="publication-toolbar reveal">
+          <label class="publication-search">
+            <span class="sr-only">Search publications</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+            <input id="publication-search" type="search" placeholder="Search the publication archive…" autocomplete="off">
+            <kbd aria-hidden="true">/</kbd>
+          </label>
+
+          <div class="filter-buttons" role="group" aria-label="Filter publications by research theme">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="waves-curved">Waves & curved structures</button>
+            <button class="filter-button" type="button" data-filter="mems-nonlinear">MEMS</button>
+            <button class="filter-button" type="button" data-filter="energy-harvesting">Energy harvesting</button>
+            <button class="filter-button" type="button" data-filter="optimization-diagnostics">Optimization & diagnostics</button>
+            <button class="filter-button" type="button" data-filter="ai-robotics">AI & robotics</button>
+            <button class="filter-button" type="button" data-filter="conference">Conferences</button>
+          </div>
+        </div>
+
+        <div class="publication-summary reveal">
+          <p><strong id="publication-visible-count">18</strong> records shown</p>
+          <div class="publication-profile-links">
+            <a href="https://scholar.google.com/citations?user=DR-4DkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+            <a href="https://orcid.org/0000-0002-6947-6600" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+            <a href="https://vbn.aau.dk/en/persons/behnamf/" target="_blank" rel="noopener noreferrer">AAU portal ↗</a>
+          </div>
+        </div>
+
+        <div id="publication-list" class="publication-list" aria-live="polite"></div>
+        <p id="publication-empty" class="empty-state" hidden>No publications match the selected filters.</p>
+
+        <noscript>
+          <div class="noscript-card">JavaScript is required for the searchable publication archive. The complete record is available through Google Scholar and the Aalborg University Research Portal.</div>
+        </noscript>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-muted">
+      <div class="container experience-grid">
+        <div class="reveal">
+          <p class="section-kicker">Research trajectory</p>
+          <h2>Experience across mechanics, computation, and intelligent systems</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-year">2023–2026</span>
+              <div><h3>Aalborg University, Denmark</h3><p>Marie Skłodowska-Curie PhD Fellow in Solid and Computational Mechanics. Research on curved structures, vibration, wave propagation, manufacturing effects, and robust computational modelling.</p></div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-year">2019–2023</span>
+              <div><h3>Özyeğin University, Türkiye</h3><p>MSc researcher and Research Assistant in the Vibrations and Acoustics Laboratory, with projects in structural diagnostics, rotordynamics, optimization, energy harvesting, and computational mechanics.</p></div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-year">2014–2019</span>
+              <div><h3>Kharazmi University, Iran</h3><p>Research Assistant in nonlinear intelligent structures, focusing on electrostatically actuated microbeams, microplates, instability, nonlinear resonance, and smart microsystems.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="methods-panel reveal">
+          <p class="section-kicker">Methods</p>
+          <h2>Research toolkit</h2>
+          <div class="method-groups">
+            <article>
+              <span>01</span>
+              <div><h3>Analytical mechanics</h3><p>Governing-equation derivation, perturbation methods, modal reduction, dynamic stiffness, transfer matrices, Bloch–Floquet theory, and stability analysis.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h3>Computational mechanics</h3><p>FEM, WFEM, nonlinear continuation, eigenanalysis, finite-chain response, convergence studies, uncertainty quantification, and model verification.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h3>Optimization & inverse problems</h3><p>Hybrid metaheuristics, parameter identification, damage detection, design optimization, statistical benchmarking, and sensitivity analysis.</p></div>
+            </article>
+            <article>
+              <span>04</span>
+              <div><h3>Scientific machine learning</h3><p>Physics-informed neural networks, invariant-aware neural inverse models, forecasting, neural operators, and physics-constrained surrogates.</p></div>
+            </article>
+            <article>
+              <span>05</span>
+              <div><h3>Experimental validation</h3><p>Modal testing, impact tests, laser Doppler vibrometry, finite-chain transmission measurements, and comparison with independent FE models.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Research collaboration, academic discussion, and scientific exchange</h2>
+          <p>I welcome conversations related to structural dynamics, wave propagation, curved structures, nonlinear mechanics, computational modelling, and physics-informed machine learning.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:behnamf@mp.aau.dk">behnamf@mp.aau.dk</a>
+          <a class="button button-secondary" href="https://scholar.google.com/citations?user=DR-4DkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+          <a class="text-link" href="https://vbn.aau.dk/en/persons/behnamf/" target="_blank" rel="noopener noreferrer">Institutional profile at Aalborg University <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">BF</span><span class="brand-copy"><strong>Behnam Firouzi</strong><small>Personal research portfolio</small></span></a>
+        <p>Structural dynamics · Wave mechanics · Computational engineering</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=DR-4DkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-6947-6600" target="_blank" rel="noopener noreferrer">ORCID</a>
+        <a href="https://vbn.aau.dk/en/persons/behnamf/" target="_blank" rel="noopener noreferrer">AAU Research Portal</a>
+        <a href="mailto:behnamf@mp.aau.dk">Email</a>
+      </div>
+      <div class="footer-meta">
+        <p>Last updated: July 2026</p>
+        <p>Built for GitHub Pages.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>
